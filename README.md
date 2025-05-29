@@ -32,7 +32,7 @@ project-root/
 ## 🔧 Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **APIs**: Google Maps Embed API, Web Speech API
+- **APIs**: Google Maps Embed API
 - **Forms**: Google Forms integration
 
 ## 📝 How to Use
