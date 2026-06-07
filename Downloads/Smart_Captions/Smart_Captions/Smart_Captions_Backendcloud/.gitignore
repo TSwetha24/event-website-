@@ -1,0 +1,48 @@
+# ================= BACKEND =================
+backend/node_modules/
+backend/.env
+
+backend/output
+backend/uploads
+backend/temp
+backend/audio
+backend/final
+backend/captions
+
+# ================= FRONTEND =================
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+frontend/coverage
+frontend/build
+
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ================= GLOBAL =================
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large files (IMPORTANT 🚨)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+
+# Optional (recommended)
+dist/
+build/
