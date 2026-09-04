@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Fest Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .event-details-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .dark-mode .event-details-container {
+      background: rgba(30, 30, 30, 0.9);
+      color: #e0e0e0;
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background: #ff007f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover {
+      background: #e0009d;
+      transform: translateY(-2px);
+    }
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .detail-card {
+      padding: 20px;
+      background: rgba(255, 0, 127, 0.1);
+      border-radius: 10px;
+      border-left: 4px solid #ff007f;
+    }
+    .detail-card h3 {
+      margin-top: 0;
+      color: #ff007f;
+    }
+    .event-highlight {
+      font-weight: bold;
+      color: #ff007f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cultural Fest 2025</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <div class="event-details-container">
+    <a href="index.html" class="back-button">← Back to Events</a>
+    <h2>Complete Event Details</h2>
+    
+    <div class="details-grid">
+      <div class="detail-card">
+        <h3>Event Categories</h3>
+        <p><span class="event-highlight">Dance:</span> Classical, Western, Folk, Fusion</p>
+        <p><span class="event-highlight">Music:</span> Solo Singing, Group Singing, Instrumental</p>
+        <p><span class="event-highlight">Drama:</span> Skits, Mime, Stand-up Comedy</p>
+        <p><span class="event-highlight">Fashion Show:</span> Traditional & Western Themes</p>
+      </div>
+      
+      <div class="detail-card">
+        <h3>Participation Rules</h3>
+        <p><strong>Team Size:</strong> Solo to groups of 15 allowed</p>
+        <p><strong>Duration:</strong> 3 days (20-22 May 2025)</p>
+        <p><strong>Time Limit:</strong> 5-8 minutes per performance</p>
+        <p><strong>Judging Criteria:</strong> Creativity, Coordination, Presentation</p>
+      </div>
+      
+      <div class="detail-card">
+        <h3>Prizes & Awards</h3>
+        <p><strong>Overall Championship:</strong> ₹15,000</p>
+        <p><strong>Category Winners:</strong> ₹5,000 each</p>
+        <p><strong>Special Awards:</strong> Best Costume, Best Choreography</p>
+        <p><strong>Certificates:</strong> For all participants</p>
+      </div>
+      
+      <div class="detail-card">
+        <h3>Schedule</h3>
+        <p><strong>Day 1:</strong> Dance Competitions</p>
+        <p><strong>Day 2:</strong> Music & Drama</p>
+        <p><strong>Day 3:</strong> Fashion Show & Award Ceremony</p>
+        <p><strong>Timings:</strong> 10:00 AM - 8:00 PM daily</p>
+      </div>
+      
+      <div class="detail-card">
+        <h3>Registration</h3>
+        <p><strong>Deadline:</strong> 15 May 2025</p>
+        <p><strong>Entry Fee:</strong> ₹200 per participant</p>
+        <p><strong>Team Registration:</strong> Required for group events</p>
+        <p><strong>Contact:</strong> culturals@college.edu</p>
+      </div>
+      
+      <div class="detail-card">
+        <h3>Venue Details</h3>
+        <p><strong>Location:</strong> Open Air Theatre</p>
+        <p><strong>Facilities:</strong> Green rooms, practice areas</p>
+        <p><strong>Equipment:</strong> Basic sound system provided</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 College Event Management | Developed by Swetha
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

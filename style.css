@@ -1,0 +1,387 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e6d9;
+    color: #333;
+    transition: background-color 0.4s, color 0.4s;
+    overflow-x: hidden;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  header {
+    background: linear-gradient(45deg, #07e8b0, #f02000, #eb04c0, #0ac419);
+    background-size: 400% 400%;
+    animation: gradientFlow 10s ease infinite;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid #ff79b0;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  #darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ffffff20;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  #darkModeToggle:hover {
+    background: #ffffff40;
+  }
+  
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .event-card {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.25);
+  }
+  
+  .event-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Default image style */
+  .event-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Specific style for Cultural Fest image */
+  .event-card:nth-child(2) .event-img {
+    height: 380px; /* Slightly taller than other images */
+    object-position: center top; /* Focus on the top part of the image */
+  }
+  
+  .event-img:hover {
+    transform: scale(1.03); /* More subtle hover effect */
+  }
+  
+  .event-details {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .event-map {
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .neon-button {
+    background: transparent;
+    color: #ff007f;
+    border: 2px solid #ff007f;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .neon-button::after {
+    content: "";
+    background: rgba(255, 0, 127, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+  
+  .neon-button:active::after {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .neon-button:hover {
+    box-shadow: 0 0 12px #ff007f, 0 0 24px #ff007f;
+    background: #ff007f20;
+    color: #001f33;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .error-msg {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ff007f;
+    border-radius: 10px;
+  }
+  
+  /* Event Title Styles */
+  .event-title {
+    color: #ff007f;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .event-title:hover {
+    background-color: #ff007f20;
+    transform: translateY(-2px);
+    text-decoration: underline;
+  }
+  
+  /* Media Query for Small Devices */
+  @media (max-width: 768px) {
+    .event-card {
+      flex-direction: column;
+    }
+    .event-img {
+      width: 100px;
+      height: 200px;
+    }
+    .event-card:nth-child(2) .event-img {
+      height: 220px; /* Slightly taller for Cultural Fest on mobile */
+    }
+    .event-map {
+      height: 180px;
+    }
+    .glass {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  /* General Styles */
+.organizer-info, .contact-info {
+  background-color: #c8b8d6;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.organizer-info h3, .contact-info h4 {
+  color: #2c3e50;
+}
+
+.organizer-info p, .contact-info p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.organizer-info strong, .contact-info strong {
+  color: #2980b9;
+}
+
+/* Styling the contact numbers */
+.contact-info p {
+  color: #16a085;
+}
+
+.contact-info p:hover {
+  color: #1abc9c;
+  cursor: pointer;
+}
+#confirmationMessage {
+  display: none;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* color is set dynamically in JS */
+}
+
+#googleFormLink {
+  display: none;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ff007f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#googleFormLink:hover {
+  color: #e60073;
+}
+
+#badge {
+  display: none;
+  margin-top: 10px;
+  padding: 5px 15px;
+  background: #ff007f;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff007f;
+}
+
+/* Hamburger Icon */
+#menuToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#menuToggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Transform hamburger to X */
+#menuToggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menuToggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#menuToggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background: #f0f0f0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #444;
+}
+
+#p {
+  list-style: none;
+  padding: 0;
+  margin: 89px 0;
+  margin-bottom: 19px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Background overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Event Management</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Hamburger Icon -->
+  <div id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <h3>About PSG Tech</h3>
+    <ul>
+      <li>Top-ranked autonomous institution in India.</li>
+      <li>Accredited by NAAC with an A++ grade.</li>
+      <li>Strong industry-institute collaboration.</li>
+      <li>Home to numerous in-house startups and innovation labs.</li>
+      <li>Renowned alumni across the globe.</li>
+      <li>Smart campus equipped with cutting-edge technologies.</li>
+      <li>Vibrant student life with clubs and festivals.</li>
+      <li>Consistent record of excellent placements.</li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay"></div>
+
+  <header>
+    <h1>College Event Management</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <section class="event-card fade-in" id="tech-symposium">
+    <div class="event-img-container">
+      <img src="https://www.knowafest.com/files/uploads/WhatsApp%20Image%202024-01-31%20at%2021.24.57-2024021003.jpeg" class="event-img" alt="Tech Symposium"/>
+    </div>
+    <div class="event-details">
+      <h2><a href="tech-symposium.html" class="event-title">Kriya Tech Symposium</a></h2>
+      <p>Date: 23 May 2025</p>
+      <p>Location: CSE Block Auditorium</p>
+      <p id="techCountdown"></p>
+      <iframe class="event-map" src="https://maps.google.com/maps?q=PSG%20College%20of%20Technology&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="200" loading="lazy"></iframe>
+
+      <div class="organizer-info">
+        <h3>Organized by: Tech Club</h3>
+        <p><strong>Club Staff Secretary:</strong> Renuka </p>
+        <p><strong>Student Secretary:</strong> Muthu kumaran</p>
+      </div>
+      <div class="contact-info">
+        <h4>For Doubt Clarification, Contact:</h4>
+        <p><strong>Pavithra:</strong> +91 9876543210</p>
+        <p><strong>Kavin:</strong> +91 9123456789</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="event-card fade-in" id="cultural-fest">
+    <div class="event-img-container">
+      <img src="images.jpg" style="width: fit-content;" height="fit-content" class="event-img" alt="Cultural Fest"/>
+    </div>
+    <div class="event-details">
+      <h2><a href="cultural-fest.html" class="event-title">Cultural Fest</a></h2>
+      <p>Date: 20 May 2025</p>
+      <p>Location: Open Air Theatre</p>
+      <p id="culturalFestCountdown"></p>
+      <iframe class="event-map" src="https://maps.google.com/maps?q=PSG%20College%20Open%20Theatre&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="200" loading="lazy"></iframe>
+
+      <div class="organizer-info">
+        <h3>Organized by: Cultural Club</h3>
+        <p><strong>Club Staff Secretary:</strong> Malar</p>
+        <p><strong>Student Secretary:</strong> Vetri</p>
+      </div>
+      <div class="contact-info">
+        <h4>For Doubt Clarification, Contact:</h4>
+        <p><strong>Amudhan:</strong> +91 9876543210</p>
+        <p><strong>Subramanian:</strong> +91 9123456789</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="registration" class="glass">
+    <h2>Register for Event</h2>
+    <form id="regForm">
+      <input type="text" id="name" placeholder="Your Name" aria-label="Your Name" required /><br/>
+      <input type="email" id="email" placeholder="Email" aria-label="Email" required /><br/>
+      <span class="error-msg" id="emailError"></span><br/>
+      <select id="event" aria-label="Select Event" required>
+        <option value="">--Select Event--</option>
+        <option value="Tech Symposium">Tech Symposium</option>
+        <option value="Cultural Fest">Cultural Fest</option>
+      </select><br/><br/>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4Te5pJNTstL2J914O3CzqLB4v7nvJ_1m_75RXabf228103Q/viewform?usp=dialog" target="_blank" style="color: blue; font-size: 18px;">Before Clicking the submit Button .Fill the Google Form</a>
+      <button type="submit" class="neon-button">Submit</button>
+    </form>
+    <div id="confirmationMessage" style="display:none; color: green; margin-top: 20px;"></div>
+    <div id="badge" style="display:none; margin-top: 15px;">🏅 You earned a registration badge!</div>
+  </section>
+
+  <!-- Google Form Embed Section -->
+  <section id="googleFormLink" style="display:none; text-align:center;">
+    <h3>Thank you for registering! You should also register via our Google Form:</h3>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4Te5pJNTstL2J914O3CzqLB4v7nvJ_1m_75RXabf228103Q/viewform?usp=dialog" target="_blank" style="color: blue; font-size: 18px;">Click here to access the Google Form</a>
+  </section>
+
+  <footer>
+    &copy; 2025 College Event Management | Developed by Swetha
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
